@@ -9,5 +9,7 @@
         <file>monstercollectionmenu.qml</file>
         <file>versusmenu.qml</file>
         <file>raritymenu.qml</file>
+        <file>monstercollectionlist.qml</file>
+        <file>QMark.png</file>
     </qresource>
 </RCC>
