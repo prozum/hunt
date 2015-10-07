@@ -2,6 +2,9 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
+        <file>FB-f-Logo__blue_29.png</file>
+        <file>FEZ-04-512.png</file>
+        <file>setting.qml</file>
+        <file>facebook.qml</file>
     </qresource>
 </RCC>
-
