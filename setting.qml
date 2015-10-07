@@ -27,10 +27,17 @@ Item {
             y: parent.height * 0.5
         }
 
+        Text {
+            id: text4
+            text: qsTr("FOV")
+            x: parent.width * 0.1
+            y: parent.height * 0.7
+        }
+
         Slider {
             id: slider1
             x: parent.width * 0.1
-            y: parent.height * 0.2
+            y: parent.height * 0.15
             width: parent.width * 0.8
             value: 0.5
         }
@@ -38,7 +45,7 @@ Item {
         Slider {
             id: slider2
             x: parent.width * 0.1
-            y: parent.height * 0.4
+            y: parent.height * 0.35
             width: parent.width * 0.8
             value: 0.5
         }
@@ -46,7 +53,15 @@ Item {
         Slider {
             id: slider3
             x: parent.width * 0.1
-            y: parent.height * 0.6
+            y: parent.height * 0.55
+            width: parent.width * 0.8
+            value: 0.5
+        }
+
+        Slider {
+            id: slider4
+            x: parent.width * 0.1
+            y: parent.height * 0.75
             width: parent.width * 0.8
             value: 0.5
         }
