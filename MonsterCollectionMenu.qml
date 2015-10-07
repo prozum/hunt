@@ -20,26 +20,26 @@ Item {
             highlight: Rectangle { width: 80; height: 80; color: "lightsteelblue" }
 
             model: ListModel {
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
             }
 
             delegate: Column {
@@ -59,10 +59,12 @@ Item {
                     onClicked: {
                         if(parent.GridView.view.currentIndex == index)
                         {
+                            console.log("Triggered");
                             var component = Qt.createComponent(infopage);
                             if(component.status == Component.Ready)
                             {
-                                component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+                                component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
+                                console.log("Created")
                             }
                         }
                         parent.GridView.view.currentIndex = index
