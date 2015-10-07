@@ -4,7 +4,7 @@ import QtQuick.Controls 1.4
 import QtGraphicalEffects 1.0
 
 Window {
-    id: main
+    id: root
     visible: true
     x: 0
     y: 0
@@ -12,50 +12,51 @@ Window {
     height: 500
 
     Rectangle {
-        id: mainmaster
+        id: rootmaster
         anchors.fill: parent
 
-        Button {
-            text: "GO HUNTING"
-            x: parent.width * 0.15
-            y: parent.height * 0.10
-            width: parent.width * 0.7
-            anchors.centerIn: parent.Center
-            onClicked: {
-                var component = Qt.createComponent("raritymenu.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
-                }
-            }
+        Logo {
+            id: logo
+            source: "gfx/logo.png"
+            width: root.width -200
         }
 
-        Button {
-            text: "MONSTER COLLECTION"
-            x: parent.width * 0.15
-            y: parent.height * 0.30
-            width: parent.width * 0.7
-            anchors.centerIn: parent.Center
-            onClicked: {
-                var component = Qt.createComponent("monstercollectionmenu.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+        Column {
+            anchors.centerIn: parent
+            spacing: 16
+            Button {
+                text: "GO HUNTING"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    var component = Qt.createComponent("RarityMenu.qml");
+                    if(component.status == Component.Ready)
+                    {
+                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
+                    }
                 }
             }
-        }
 
-        Button {
-            text: "VERSUS"
-            x: parent.width * 0.15
-            y: parent.height * 0.5
-            width: parent.width * 0.7
-            anchors.centerIn: parent.Center
-            onClicked: {
-                var component = Qt.createComponent("versusmenu.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+            Button {
+                text: "MONSTER COLLECTION"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    var component = Qt.createComponent("MonsterCollectionMenu.qml");
+                    if(component.status == Component.Ready)
+                    {
+                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
+                    }
+                }
+            }
+
+            Button {
+                text: "VERSUS"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    var component = Qt.createComponent("VersusMenu.qml");
+                    if(component.status == Component.Ready)
+                    {
+                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
+                    }
                 }
             }
         }
@@ -69,17 +70,17 @@ Window {
 
             Image {
                 id: facebook
-                source: "FB-f-Logo__blue_29.png"
+                source: "gfx/facebook.png"
                 sourceSize: Qt.size(parent.width, parent.height)
             }
 
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    var component = Qt.createComponent("facebook.qml");
+                    var component = Qt.createComponent("Facebook.qml");
                     if(component.status == Component.Ready)
                     {
-                        component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height});
+                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height});
                     }
                 }
             }
@@ -94,17 +95,17 @@ Window {
 
             Image {
                 id: settings
-                source: "FEZ-04-512.png"
+                source: "gfx/settings.png"
                 sourceSize: Qt.size(parent.width, parent.height)
             }
 
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    var component = Qt.createComponent("setting.qml");
+                    var component = Qt.createComponent("Setting.qml");
                     if(component.status == Component.Ready)
                     {
-                        component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height});
+                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height});
                     }
                 }
             }
