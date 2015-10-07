@@ -7,7 +7,7 @@ Item {
         anchors.fill: parent
 
         Button {
-            text: "Error:\nCould not connect\nto facebook.\n\nTab to go back..."
+            text: "Error:\nCould not connect\nto facebook.\n\nTap to go back..."
             anchors.fill: parent
             onClicked: {
                 facebook.destroy()

@@ -12,6 +12,7 @@ Window {
     height: 500
 
     Rectangle {
+        id: mainmaster
         anchors.fill: parent
 
         Button {
@@ -20,14 +21,28 @@ Window {
             y: parent.height * 0.10
             width: parent.width * 0.7
             anchors.centerIn: parent.Center
+            onClicked: {
+                var component = Qt.createComponent("raritymenu.qml");
+                if(component.status == Component.Ready)
+                {
+                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+                }
+            }
         }
 
         Button {
-            text: "BROWSE COLLECTION"
+            text: "MONSTER COLLECTION"
             x: parent.width * 0.15
             y: parent.height * 0.30
             width: parent.width * 0.7
             anchors.centerIn: parent.Center
+            onClicked: {
+                var component = Qt.createComponent("monstercollectionmenu.qml");
+                if(component.status == Component.Ready)
+                {
+                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+                }
+            }
         }
 
         Button {
@@ -36,6 +51,13 @@ Window {
             y: parent.height * 0.5
             width: parent.width * 0.7
             anchors.centerIn: parent.Center
+            onClicked: {
+                var component = Qt.createComponent("versusmenu.qml");
+                if(component.status == Component.Ready)
+                {
+                    component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+                }
+            }
         }
 
         Item {
@@ -57,7 +79,7 @@ Window {
                     var component = Qt.createComponent("facebook.qml");
                     if(component.status == Component.Ready)
                     {
-                        component.createObject(facebook, {x: -parent.x, y: -parent.y, width: main.width, height: main.height});
+                        component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height});
                     }
                 }
             }
@@ -82,7 +104,7 @@ Window {
                     var component = Qt.createComponent("setting.qml");
                     if(component.status == Component.Ready)
                     {
-                        component.createObject(settings, {x: -parent.x, y: -parent.y, width: main.width, height: main.height});
+                        component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height});
                     }
                 }
             }

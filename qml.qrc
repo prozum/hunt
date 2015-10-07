@@ -6,5 +6,8 @@
         <file>FEZ-04-512.png</file>
         <file>setting.qml</file>
         <file>facebook.qml</file>
+        <file>monstercollectionmenu.qml</file>
+        <file>versusmenu.qml</file>
+        <file>raritymenu.qml</file>
     </qresource>
 </RCC>
