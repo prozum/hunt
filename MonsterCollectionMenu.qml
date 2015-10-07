@@ -20,19 +20,26 @@ Item {
             highlight: Rectangle { width: 80; height: 80; color: "lightsteelblue" }
 
             model: ListModel {
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
-                ListElement {name: "#NAME"; icon: "QMark.png"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
+                ListElement {name: "#NAME"; icon: "QMark.png"; infopage: "monstercollectioninfo.qml"}
             }
 
             delegate: Column {
@@ -49,15 +56,19 @@ Item {
                 Text {text: name; anchors.horizontalCenter: parent.horizontalCenter}
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: parent.GridView.view.currentIndex = index
+                    onClicked: {
+                        if(parent.GridView.view.currentIndex == index)
+                        {
+                            var component = Qt.createComponent(infopage);
+                            if(component.status == Component.Ready)
+                            {
+                                component.createObject(main, {x: 0, y: 0, width: main.width, height: main.height})
+                            }
+                        }
+                        parent.GridView.view.currentIndex = index
+                    }
                 }
             }
-        }
-
-        Button {
-            text: "info"
-            x: parent.width * 0.7
-            y: parent.height * 0.9
         }
 
         Button {

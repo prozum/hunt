@@ -7,6 +7,7 @@
         <file>VersusMenu.qml</file>
         <file>RarityMenu.qml</file>
         <file>MonsterCollectionList.qml</file>
+        <file>monstercollectioninfo.qml</file>
         <file>Logo.qml</file>
         <file>gfx/facebook.png</file>
         <file>gfx/logo.png</file>
