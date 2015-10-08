@@ -15,5 +15,10 @@
         <file>HuntTarget.qml</file>
         <file>HuntScreen.qml</file>
         <file>gfx/test.webm</file>
+        <file>gfx/monsters/cyclops.png</file>
+        <file>gfx/monsters/marie.png</file>
+        <file>gfx/monsters/pumpkin.png</file>
+        <file>gfx/monsters/slimy.png</file>
+        <file>gfx/monsters/truck.png</file>
     </qresource>
 </RCC>

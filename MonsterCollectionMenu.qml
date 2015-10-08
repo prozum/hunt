@@ -20,11 +20,11 @@ Item {
             highlight: Rectangle { width: 80; height: 80; color: "lightsteelblue" }
 
             model: ListModel {
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Cycky"; icon: "gfx/monsters/cyclops.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Mariky"; icon: "gfx/monsters/marie.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Pumky"; icon: "gfx/monsters/pumpkin.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Slimky"; icon: "gfx/monsters/slimy.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Trcuky"; icon: "gfx/monsters/truck.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}

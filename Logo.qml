@@ -22,15 +22,17 @@ Item {
             target: glowAnim
             property: "radius"
             from: 0
-            to: 32
+            to: 20
             duration: 1000
+            easing.type: Easing.InOutSine
         }
         NumberAnimation {
             target: glowAnim
             property: "radius"
-            from: 32
+            from: 20
             to: 0
             duration: 1000
+            easing.type: Easing.InOutSine
         }
         loops: Animation.Infinite
         running: true
