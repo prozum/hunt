@@ -12,5 +12,8 @@
         <file>gfx/logo.png</file>
         <file>gfx/qmark.png</file>
         <file>gfx/settings.png</file>
+        <file>HuntTarget.qml</file>
+        <file>HuntScreen.qml</file>
+        <file>gfx/test.webm</file>
     </qresource>
 </RCC>
