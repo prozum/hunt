@@ -24,7 +24,7 @@ Item {
                 ListElement {name: "Mariky"; icon: "gfx/monsters/marie.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "Pumky"; icon: "gfx/monsters/pumpkin.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "Slimky"; icon: "gfx/monsters/slimy.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "Trcuky"; icon: "gfx/monsters/truck.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Trucky"; icon: "gfx/monsters/truck.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
@@ -42,35 +42,9 @@ Item {
                 ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
             }
 
-            delegate: Column {
-                width: 100
-                height: 100
-                Image {
-                    id: idIcon
-                    y: 20; anchors.horizontalCenter: parent.horizontalCenter
-                    source: icon
-                    width: 75
-                    height: 75
-                }
-
-                Text {text: name; anchors.horizontalCenter: parent.horizontalCenter}
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        if(parent.GridView.view.currentIndex == index)
-                        {
-                            console.log("Triggered");
-                            var component = Qt.createComponent(infopage);
-                            if(component.status == Component.Ready)
-                            {
-                                component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
-                                console.log("Created")
-                            }
-                        }
-                        parent.GridView.view.currentIndex = index
-                    }
-                }
+            delegate: MonsterCollectionItem {
             }
+
         }
 
         Button {

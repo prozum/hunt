@@ -6,9 +6,25 @@ Item {
     Rectangle {
         anchors.fill: parent
 
+        Column {
+
+            Row {
+                Text {
+                    text: "name: Pumpkin"
+                }
+            }
+
+            Image {
+                source: "gfx/monsters/pumpkin.png"
+            }
+
+
+        }
+
+
         Button {
-            text: "INFO TO BE ADDED"
-            anchors.fill: parent
+            text: "Back"
+            anchors: parent
             onClicked: {
                 monstercollectioninfo.destroy()
             }
