@@ -9,20 +9,32 @@ Rectangle {
     property string icon
 
     Column {
-        anchors.fill: parent
-
-        Row {
-            Text {
-                text: "name: " + monstercollectioninfo.name
-            }
+        anchors.top: monstercollectioninfo.top
+        anchors.left: monstercollectioninfo.left
+        anchors.leftMargin: 10
+        anchors.topMargin: 10
+        spacing: 25
+        Text {
+            text: "name: " + monstercollectioninfo.name
         }
-
-        Image {
-            source: monstercollectioninfo.icon
+        Text {
+            text: "rule: Will try to \nescape when seen"
         }
-
-
+        Text {
+            text: "str: 50\nint: -1\nagi: 10"
+        }
     }
+
+    Image {
+        anchors.right: monstercollectioninfo.right
+        //anchors.horizontalCenter: parent.horizontalCenter
+        fillMode: Image.PreserveAspectFit
+        width: parent.width/2
+        height: parent.width/2
+        source: monstercollectioninfo.icon
+    }
+
+
 
     Button {
         text: "Back"

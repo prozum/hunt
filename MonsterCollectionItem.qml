@@ -33,7 +33,7 @@ Item {
                 console.log(name);
                 if(component.status == Component.Ready)
                 {
-                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height, name: name, source: icon})
+                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height, name: name, icon: icon})
                     console.log("Created")
                 }
             }
