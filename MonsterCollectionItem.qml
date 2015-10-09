@@ -6,10 +6,11 @@ Item {
 
 
     Column {
+        anchors.horizontalCenter: parent.horizontalCenter
+
         Image {
             id: idIcon
             y: 20;
-            anchors.horizontalCenter: parent.horizontalCenter
             fillMode: Image.PreserveAspectFit
             source: icon
             width: 75
@@ -28,7 +29,6 @@ Item {
             if(parent.GridView.view.currentIndex == index)
             {
                 console.log(index);
-                console.log(parent.GridView.view.currentIndex);
                 var component = Qt.createComponent(infopage);
                 if(component.status == Component.Ready)
                 {

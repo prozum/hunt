@@ -25,21 +25,21 @@ Item {
                 ListElement {name: "Pumky"; icon: "gfx/monsters/pumpkin.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "Slimky"; icon: "gfx/monsters/slimy.png"; infopage: "MonsterCollectionInfo.qml"}
                 ListElement {name: "Trucky"; icon: "gfx/monsters/truck.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
-                ListElement {name: "#NAME"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
+                ListElement {name: "Unknown"; icon: "gfx/qmark.png"; infopage: "MonsterCollectionInfo.qml"}
             }
 
             delegate: MonsterCollectionItem {

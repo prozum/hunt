@@ -1,33 +1,31 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
 
-Item {
+Rectangle {
     id: monstercollectioninfo
-    Rectangle {
-        anchors.fill: parent
+    anchors.fill: parent
 
-        Column {
+    Column {
 
-            Row {
-                Text {
-                    text: "name: Pumpkin"
-                }
+        Row {
+            Text {
+                text: "name: Pumpkin"
             }
+        }
 
-            Image {
-                source: "gfx/monsters/pumpkin.png"
-            }
-
-
+        Image {
+            source: "gfx/monsters/pumpkin.png"
         }
 
 
-        Button {
-            text: "Back"
-            anchors: parent
-            onClicked: {
-                monstercollectioninfo.destroy()
-            }
+    }
+
+
+    Button {
+        text: "Back"
+        anchors: parent
+        onClicked: {
+            monstercollectioninfo.destroy()
         }
     }
 }
