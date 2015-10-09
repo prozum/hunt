@@ -21,5 +21,6 @@
         <file>gfx/monsters/slimy.png</file>
         <file>gfx/monsters/truck.png</file>
         <file>MonsterCollectionItem.qml</file>
+        <file>gfx/background.png</file>
     </qresource>
 </RCC>

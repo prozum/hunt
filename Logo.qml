@@ -14,7 +14,8 @@ Item {
     Glow {
         id: glowAnim
         anchors.fill: img
-        samples: 16
+        samples: 32
+        spread: 0.8
         color: "red"
         source: img
     }
@@ -23,7 +24,7 @@ Item {
         NumberAnimation {
             target: glowAnim
             property: "radius"
-            from: 0
+            from: 5
             to: 20
             duration: 1000
             easing.type: Easing.InOutSine
@@ -32,7 +33,7 @@ Item {
             target: glowAnim
             property: "radius"
             from: 20
-            to: 0
+            to: 5
             duration: 1000
             easing.type: Easing.InOutSine
         }
