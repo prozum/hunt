@@ -2,11 +2,13 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 Item {
+    id: root
     property alias source: img.source
 
     Image {
         id: img
         width: root.width
+        anchors.horizontalCenter: root.horizontalCenter
     }
 
     Glow {

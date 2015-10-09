@@ -5,28 +5,30 @@ Rectangle {
     id: monstercollectioninfo
     anchors.fill: parent
 
+    property string name
+    property string icon
+
     Column {
+        anchors.fill: parent
 
         Row {
             Text {
-                text: "name: Pumpkin"
+                text: "name: " + monstercollectioninfo.name
             }
         }
 
         Image {
-            source: "gfx/monsters/pumpkin.png"
+            source: monstercollectioninfo.icon
         }
 
 
     }
 
-
     Button {
         text: "Back"
-        anchors: parent
-        onClicked: {
-            monstercollectioninfo.destroy()
-        }
+        x: parent.width * 0.1
+        y: parent.height * 0.9
+        onClicked: monstercollectioninfo.destroy()
     }
 }
 

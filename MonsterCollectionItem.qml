@@ -28,11 +28,12 @@ Item {
         onClicked: {
             if(parent.GridView.view.currentIndex == index)
             {
-                console.log(index);
                 var component = Qt.createComponent(infopage);
+                console.log(component.errorString());
+                console.log(name);
                 if(component.status == Component.Ready)
                 {
-                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
+                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height, name: name, source: icon})
                     console.log("Created")
                 }
             }
