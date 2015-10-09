@@ -46,7 +46,7 @@ Window {
             text: "VERSUS"
             anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
-                var component = Qt.createComponent("VersusMenu.qml");
+                var component = Qt.createComponent("Facebook.qml");
                 if(component.status == Component.Ready)
                 {
                     component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
