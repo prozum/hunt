@@ -22,5 +22,8 @@
         <file>gfx/monsters/truck.png</file>
         <file>MonsterCollectionItem.qml</file>
         <file>gfx/background.png</file>
+        <file>gfx/button.png</file>
+        <file>MenuButton.qml</file>
+        <file>gfx/font.ttf</file>
     </qresource>
 </RCC>

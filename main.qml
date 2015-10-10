@@ -54,48 +54,26 @@ Window {
 
     Column {
         anchors.centerIn: parent
-        spacing: 26
-        Button {
-            text: "GO HUNTING"
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: {
-                var component = Qt.createComponent("RarityMenu.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
-                }
-            }
-        }
+        spacing: 32
 
-        Button {
-            text: "MONSTER COLLECTION"
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: {
-                var component = Qt.createComponent("MonsterCollectionMenu.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
-                }
-            }
+        MenuButton {
+            text: "Hunt"
+            link: "RarityMenu.qml"
         }
-
-        Button {
-            text: "VERSUS"
-            anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: {
-                var component = Qt.createComponent("Facebook.qml");
-                if(component.status == Component.Ready)
-                {
-                    component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
-                }
-            }
+        MenuButton {
+            text: "Collection"
+            link: "MonsterCollectionMenu.qml"
+        }
+        MenuButton {
+            text: "Versus"
+            link: "Facebook.qml"
         }
     }
 
     Row {
-        spacing: root.width - 128
+        spacing: root.width - 160
         anchors.horizontalCenter: parent.horizontalCenter
-        y: root.height*0.9
+        y: root.height - 80
 
         Image {
             id: facebookitem

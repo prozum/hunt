@@ -14,10 +14,10 @@ Item {
     Glow {
         id: glowAnim
         anchors.fill: img
+        source: img
         samples: 32
         spread: 0.8
         color: "red"
-        source: img
     }
 
     SequentialAnimation {
