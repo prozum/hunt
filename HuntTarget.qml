@@ -9,9 +9,9 @@ Item {
         Text {
             id: targetname
             text: qsTr("<UNKNOWN MOSTER>")
-            x: parent.width * 0.25
-            y: parent.height * 0.05
-            width: parent.width * 0.5
+            font.pointSize: 18
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: parent.height * 0.03
         }
 
         Image {
@@ -45,6 +45,7 @@ Item {
             y: parent.height * 0.9
             onClicked: {
                 var component = Qt.createComponent("HuntScreen.qml");
+                console.log(component.errorString());
                 if(component.status == Component.Ready)
                 {
                     component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})

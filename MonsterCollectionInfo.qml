@@ -27,7 +27,6 @@ Rectangle {
 
     Image {
         anchors.right: monstercollectioninfo.right
-        //anchors.horizontalCenter: parent.horizontalCenter
         fillMode: Image.PreserveAspectFit
         width: parent.width/2
         height: parent.width/2
