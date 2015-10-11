@@ -8,7 +8,7 @@ Window {
     visible: true
     width: 360
     height: 500
-    color: "white"
+
 
     ShaderEffectSource {
         id: background
@@ -17,7 +17,7 @@ Window {
         wrapMode: ShaderEffectSource.Repeat
         mipmap: true
     }
-    /*
+
     ShaderEffect {
         anchors.fill: parent
         property variant b: background
@@ -44,7 +44,6 @@ Window {
                 gl_FragColor = vec4(wallcol.xyz * y*y, y*y);
             }"
     }
-    */
 
     Logo {
         source: "gfx/logo.png"
