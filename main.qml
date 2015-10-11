@@ -8,6 +8,7 @@ Window {
     visible: true
     width: 360
     height: 500
+    color: "black"
 
 
     ShaderEffectSource {
