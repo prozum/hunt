@@ -9,6 +9,8 @@ Window {
     width: 360
     height: 500
     color: "black"
+    property string state: loader.state
+
 
 
     ShaderEffectSource {
@@ -33,9 +35,8 @@ Window {
             {
                 vec2 p = -1.0 + 2.0 * qt_TexCoord0;
                 vec2 uv;
-                float an = time;
-                float can = cos(an);
-                float san = sin(an);
+                float can = cos(time);
+                float san = sin(time);
                 float x = p.x*can-p.y*san;
                 float y = p.x*san+p.y*can;
                 float recipabsy = 0.5/abs(y);
@@ -46,67 +47,21 @@ Window {
             }"
     }
 
-    Logo {
-        source: "gfx/logo.png"
-        width: root.width * 0.9
-        anchors.horizontalCenter: parent.horizontalCenter
-    }
+    Loader {
+        id: loader
+        state: "menu"
+        anchors.fill: parent
 
-    Column {
-        anchors.centerIn: parent
-        spacing: 32
-
-        MenuButton {
-            text: "Hunt"
-            link: "RarityMenu.qml"
-        }
-        MenuButton {
-            text: "Collection"
-            link: "MonsterCollectionMenu.qml"
-        }
-        MenuButton {
-            text: "Versus"
-            link: "Facebook.qml"
-        }
-    }
-
-    Row {
-        spacing: root.width - 160
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: root.height - 80
-
-        Image {
-            id: facebookitem
-            source: "gfx/facebook.png"
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    var component = Qt.createComponent("Facebook.qml");
-                    if(component.status == Component.Ready)
-                    {
-                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height});
-                    }
-                }
+        states: [
+            State {
+                name: "menu"
+                PropertyChanges { target: loader; source: "Menu.qml"}
+            },
+            State {
+                name: "hunt"
+                PropertyChanges { target: loader; source: "Menu.qml"}
             }
-        }
-
-        Image {
-            id: settingsitem
-            source: "gfx/settings.png"
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    var component = Qt.createComponent("Setting.qml");
-                    if(component.status == Component.Ready)
-                    {
-                        //root.visible = false
-                        component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height});
-                    }
-                }
-            }
-        }
+        ]
     }
 }
 

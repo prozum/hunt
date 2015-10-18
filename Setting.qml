@@ -33,7 +33,7 @@ Rectangle {
         y: parent.height * 0.7
     }
 
-    Slider {
+    CustomSlider {
         id: slider1
         x: parent.width * 0.1
         y: parent.height * 0.15
@@ -41,7 +41,7 @@ Rectangle {
         value: 0.5
     }
 
-    Slider {
+    CustomSlider {
         id: slider2
         x: parent.width * 0.1
         y: parent.height * 0.35
@@ -49,7 +49,7 @@ Rectangle {
         value: 0.5
     }
 
-    Slider {
+    CustomSlider {
         id: slider3
         x: parent.width * 0.1
         y: parent.height * 0.55
@@ -57,7 +57,7 @@ Rectangle {
         value: 0.5
     }
 
-    Slider {
+    CustomSlider {
         id: slider4
         x: parent.width * 0.1
         y: parent.height * 0.75
@@ -65,14 +65,11 @@ Rectangle {
         value: 0.5
     }
 
-    Button {
+    CustomButton {
         text: "Back"
         x: parent.width * 0.1
         y: parent.height * 0.9
         width: parent.width * 0.8
-        onClicked: {
-            settings.destroy()
-        }
     }
 }
 
