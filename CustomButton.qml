@@ -46,11 +46,7 @@ Item {
             parent.opacity = 1
         }
         onClicked: {
-            var component = Qt.createComponent(link);
-            if(component.status == Component.Ready)
-            {
-                component.createObject(root, {x: 0, y: 0, width: root.width, height: root.height})
-            }
+            root.state = link
         }
     }
 

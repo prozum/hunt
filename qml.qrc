@@ -23,7 +23,10 @@
         <file>MonsterCollectionItem.qml</file>
         <file>gfx/background.png</file>
         <file>gfx/button.png</file>
-        <file>MenuButton.qml</file>
+        <file>CustomButton.qml</file>
         <file>gfx/font.ttf</file>
+        <file>Menu.qml</file>
+        <file>CustomSlider.qml</file>
+        <file>Frame.qml</file>
     </qresource>
 </RCC>
